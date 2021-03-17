@@ -432,6 +432,7 @@ button-catalog:focus {
 .advantages-item {
   text-align: left;
   display: inline-block;
+  vertical-align: middle;
 }
 /*About-us*/
 .about-us {
@@ -1119,6 +1120,7 @@ fieldset legend {
   width: 50px;
   height: 50px;
   display: inline-block;
+  vertical-align: middle;
   list-style: none;
   margin-left: 10px;
   text-align: center;
