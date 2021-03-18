@@ -23,6 +23,11 @@
 /*Variables*/
 
 :root {
+  --pagination-focus:#dfdfdf;
+  --pagination-active:#d5d5d5;
+  --dir-active:#231F20;
+  --dir-hover:#ececec;
+  --pink-gray:#d5d5d5;
   --basic-gray: #a6a6a6;
   --light-gray: #eeeeee;
   --basic-dark: #283136;
@@ -109,7 +114,7 @@ img {
   color: var(--basic-black);
   width: 260px;
   height: 50px;
-  border: #eeeeee;
+  border: var(--basic-gray);
   border-radius: 3px;
   text-transform: uppercase;
 }
@@ -118,7 +123,7 @@ img {
   background-color: #dfdfdf;
 }
 .button-form:active {
-  background-color: #d5d5d5;
+  background-color:var(--pink-gray);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   mix-blend-mode: normal;
   opacity: 0.3;
@@ -126,7 +131,7 @@ img {
 .button-catalog {
   width: 191px;
   height: 50px;
-  background-color: #fb565a;
+  background-color:var(--special-red);
   color: var(--basic-white);
   font-size: 16px;
   line-height: 18px;
@@ -136,10 +141,10 @@ img {
 }
 .button-catalog:hover,
 button-catalog:focus {
-  background-color: #e74246;
+  background-color:var(--extra-red);
 }
 .button-catalog:active {
-  background-color: #d7373b;
+  background-color: var(--dark-red);
 }
 .red_bg {
   background-color: var(--special-red);
@@ -216,7 +221,7 @@ button-catalog:focus {
 .main-header-logo {
   display: flex;
   flex-grow: 1;
-  /*display: inline-block;*/
+
 }
 .nav-items {
   display: flex;
@@ -224,7 +229,6 @@ button-catalog:focus {
   flex-grow: 2;
   flex-flow: row wrap;
   margin: 0;
-  /* padding: 0; */
   font-style: normal;
   font-weight: 500;
   padding-left: 120px;
@@ -270,7 +274,7 @@ button-catalog:focus {
   opacity: 0.3;
 }
 .active-menu a {
-  border-bottom: 2px solid #fb565a;
+  border-bottom: 2px solid  var(--special-red);
 }
 .active-menu a {
   padding-bottom: 20px;
@@ -356,7 +360,7 @@ button-catalog:focus {
 .services-list p {
   margin: 0;
   padding-bottom: 40px;
-  color: #283136;
+  color: var(--basic-dark);
 }
 
 /*Main*/
@@ -460,7 +464,7 @@ button-catalog:focus {
   font-size: 45px;
   line-height: 45px;
   font-style: normal;
-  color: #000000;
+  color: var(--basic-black);
 }
 
 .about-us-advantages {
@@ -487,7 +491,7 @@ button-catalog:focus {
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  color: #283136;
+  color: var(--basic-dark);
   text-align: left;
 }
 .about-us h3 {
@@ -572,10 +576,9 @@ button-catalog:focus {
 }
 .footer-social {
   width: 1160px;
-  padding: 0 140px;
+  padding-left: 140px;
   margin-top: 30px;
   margin-bottom: 50px;
-  padding: 0 0;
   display: grid;
   grid-template-columns: 25% 75%;
 }
@@ -677,7 +680,7 @@ button-catalog:focus {
 .range-controls .bar {
   width: 70%;
   height: 2px;
-  background-color: #00ca74;
+  background-color:  var(--spesial-green);
 }
 .range-controls .toggle {
   position: absolute;
@@ -686,7 +689,7 @@ button-catalog:focus {
   width: 4px;
   height: 4px;
   padding: 0;
-  border: 8px solid #ffffff;
+  border: 8px solid var(--basic-white);
   background-color: #ababab;
   border-radius: 50%;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
@@ -708,7 +711,7 @@ button-catalog:focus {
   padding: 10px;
   margin-left: 10px;
   text-align: center;
-  color: #283136;
+  color: var(--basic-dark);
   border: none;
   border-radius: 5px;
   background: #f1f1f1;
@@ -733,7 +736,7 @@ button-catalog:focus {
   position: absolute;
   width: 18px;
   height: 18px;
-  border: 3px #4d4d4d solid;
+  border: 3px solid var(--background-catalog);
   opacity: 0.4;
   border-radius: 15px;
   top: 0;
@@ -744,7 +747,7 @@ button-catalog:focus {
   position: absolute;
   width: 18px;
   height: 18px;
-  border: 3px #4d4d4d solid;
+  border: 3px  solid var(--background-catalog);
   background-repeat: no-repeat;
   background-position: 5px;
   border-radius: 15px;
@@ -757,10 +760,10 @@ button-catalog:focus {
   position: absolute;
   width: 6px;
   height: 6px;
-  border: 2px solid #4d4d4d;
-  background-color: #4d4d4d;
+  border: 2px solid  var(--background-catalog);
+  background-color: var(--background-catalog);
   opacity: 0.4;
-  color: #283136;
+  color: var(--basic-dark);
   top: 7px;
   left: -13px;
   border-radius: 15px;
@@ -776,7 +779,7 @@ button-catalog:focus {
 }
 .price-grid input:checked + label:hover::after,
 .price-grid input + label:hover::after {
-  background-color: #4d4d4d;
+  background-color: var(--background-catalog);
   opacity: 1;
 }
 .price-grid input:checked:disabled::after,
@@ -825,7 +828,7 @@ button-catalog:focus {
   position: absolute;
   width: 18px;
   height: 18px;
-  border: 2px #4d4d4d solid;
+  border: 2px var(--background-catalog) solid;
   opacity: 0.4;
   left: -20px;
 }
@@ -863,7 +866,7 @@ button-catalog:focus {
   height: 18px;
   border: 2px #4d4d4d solid;
   opacity: 0.4;
-  background-image: url(../img/Shape1.svg);
+  background-image: url(../img/shape1.svg);
   background-repeat: no-repeat;
   background-position: 2px;
   top: -2px;
@@ -878,7 +881,7 @@ button-catalog:focus {
 }
 
 .price-features label {
-  color: #283136;
+  color: var(--basic-dark);
 }
 
 .price-features {
@@ -921,22 +924,22 @@ fieldset legend {
 }
 
 .dir-item {
-  fill:#ececec;
+  fill:var(--dir-hover);
   padding-top: 44px;
   padding-bottom: 55px;
   padding-left: 18px;
   padding-right: 0;
 }
-.dir-item svg path{fill:#ececec;}
+.dir-item svg path{fill:var(--dir-hover);}
 .dir-item svg path:hover,
 .dir-item svg path:focus {
-  fill: #A6A6A6;
+  fill:  var(--basic-gray);
 }
 .dir-item svg path:active {
-  fill: #231F20;
+  fill: var(--dir-active);
 }
 .dir-item:first-child svg path{
-  fill:#231F20;
+  fill:var(--dir-active);
 }
 .catalog-sort {
   text-transform: uppercase;
@@ -976,12 +979,12 @@ fieldset legend {
 }
 .sort-item a:hover,
 .sort-item a:focus {
-  color: #000000;
+  color: var(--basic-black);
   mix-blend-mode: normal;
   opacity: 0.6;
 }
 .sort-item a:active {
-  color: #000000;
+  color:var(--basic-black);
   opacity: 1;
 }
 
@@ -1025,7 +1028,7 @@ fieldset legend {
   color: var(--bottom-catalog);
   padding-top: 33px;
   border-radius: 3px;
-  /* word-break: break-all; */
+
 }
 .catalog-sort {
   display: flex;
@@ -1043,10 +1046,10 @@ fieldset legend {
 }
 .products-name:hover,
 .products-name:focus {
-  color: #fb565a;
+  color: var(--special-red);
 }
 .products-name:active {
-  color: #000000;
+  color: var(--basic-black);
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -1144,13 +1147,13 @@ fieldset legend {
 }
 .pagination-item:focus,
 .pagination-item:hover {
-  background-color: #dfdfdf;
+  background-color: var(--pagination-focus);
   width: 50px;
   height: 50px;
 }
 .pagination-item:last-child:focus,
 .pagination-item:last-child:hover {
-  background-color: #dfdfdf;
+  background-color: var(--pagination-focus);
   border-color: var(--light-gray);
   width: 260px;
   height: 50px;
@@ -1163,10 +1166,10 @@ fieldset legend {
 }
 .pagination-item:first-child:hover,
 .pagination-item:first-child:focus {
-  background-color: #dfdfdf;
+  background-color: var(--pagination-focus);
 }
 .pagination-item:active {
-  background-color: #d5d5d5;
+  background-color: var(--pagination-active);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   mix-blend-mode: normal;
   opacity: 0.3;
@@ -1205,7 +1208,7 @@ fieldset {
   font-size: 16px;
   line-height: 18px;
 }
-.contact-with-us h2r {
+.contact-with-us h2 {
   margin: 0;
 }
 .modal-close {
@@ -1217,8 +1220,7 @@ fieldset {
   right: 90px;
   left: 849px;
   bottom: 490px;
-  background-color: #ffffff;
-  /* background-image: url(/img/Vector.svg); */
+  background-color: var(--basic-white);
   position: absolute;
 }
 .modal-close::before,
@@ -1229,7 +1231,7 @@ fieldset {
   left: -3px;
   width: 21px;
   height: 3px;
-  background-color: #fb565a;
+  background-color: var(--special-red);
   opacity: 0.3;
   border-radius: 3px;
 }
@@ -1242,7 +1244,7 @@ fieldset {
 .logo-user {
   width: 360px;
   height: 50px;
-  background: #ffffff;
+  background: var(--basic-white);
   border: 2px solid #d7dcde;
   box-sizing: border-box;
   border-radius: 3px;
@@ -1255,7 +1257,7 @@ fieldset {
 }
 
 .text-user {
-  background: #ffffff;
+  background: var(--basic-white);
   border: 2px solid #d7dcde;
   box-sizing: border-box;
   border-radius: 3px;
@@ -1293,7 +1295,7 @@ fieldset {
   border: none;
   font-size: 16px;
   line-height: 18px;
-  background: #fb565a;
+  background: var(--special-red);
   margin-top: 45px;
   width:259px ;
 }
