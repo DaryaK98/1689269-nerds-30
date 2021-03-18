@@ -23,6 +23,9 @@
 /*Variables*/
 
 :root {
+  --popup-borders:#d7dcde;
+  --modal-close-active:#ffeeef;
+  --modal-close-hover:#feccce;
   --pagination-focus:#dfdfdf;
   --pagination-active:#d5d5d5;
   --dir-active:#231F20;
@@ -126,6 +129,13 @@ img {
   background-color:var(--pink-gray);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   mix-blend-mode: normal;
+  opacity: 0.3;
+}
+.logo-nerds:hover,
+.logo-nerds:active{
+  opacity: 0.7;
+}
+.logo-nerds:active{
   opacity: 0.3;
 }
 .button-catalog {
@@ -283,7 +293,6 @@ button-catalog:focus {
 
 .slider {
   position: relative;
-  padding-left: 140px;
   padding-right: 140px;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -312,6 +321,7 @@ button-catalog:focus {
   left: 50%;
 }
 .slider-main {
+  margin: 0 auto;
   max-width: 1157px;
 }
 .slider-button {
@@ -339,6 +349,7 @@ button-catalog:focus {
   background-color: var(--light-gray);
 }
 .services-list {
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 100px;
@@ -388,6 +399,7 @@ button-catalog:focus {
   font-weight: 500;
 }
 .slider-text{
+  overflow: auto;
   width: 400px;
 }
 .slider-text p {
@@ -570,6 +582,22 @@ button-catalog:focus {
   top: 52px;
 }
 /*Footer-social*/
+.map-responsive{
+  overflow:hidden;
+  /* padding-bottom:56.25%; */
+  position:relative;
+  height:416px;
+
+}
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  border: 0;
+  margin: 0;
+  position:absolute;
+}
 .footer-contacts {
   background-color: var(--basic-white);
   padding: 50px;
@@ -623,6 +651,7 @@ button-catalog:focus {
 }
 
 .contacts {
+
   position: relative;
 }
 
@@ -647,8 +676,8 @@ button-catalog:focus {
 .map-marker {
   position: absolute;
   display: block;
-  top: 87px;
-  left: 822px;
+  top: 112px;
+  left: 825px;
 }
 /*Range*/
 .filter-item {
@@ -724,6 +753,9 @@ button-catalog:focus {
 }
 
 /*Price-grid*/
+.price-grid input:focus + label{
+  outline: 1px solid var(--basic-gray);
+}
 .price-grid input + label {
   position: relative;
   padding-left: 13px;
@@ -822,6 +854,9 @@ button-catalog:focus {
 .price-features input + label {
   position: relative;
   padding-left: 40px;
+}
+.price-features input:focus + label{
+  outline: 1px solid var(--basic-gray);
 }
 .price-features input + label::before {
   content: "";
@@ -1019,6 +1054,7 @@ fieldset legend {
   font-size: 16px;
 }
 .catalog-description {
+  overflow: auto;
   background-color: var(--light-gray);
   min-height: 231px;
   width: 360px;
@@ -1189,11 +1225,15 @@ fieldset {
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
   padding-left: 100px;
   padding-right: 100px;
-  padding-top: 30px;
+  padding-top: 60px;
   padding-bottom: 47px;
   transform: translate(-50%, -50%);
   display: block;
   box-sizing: border-box;
+}
+.popup .one input:hover,
+.popup .one input:focus{
+  border-color:black;
 }
 .popup-background {
   min-height: 100%;
@@ -1208,9 +1248,7 @@ fieldset {
   font-size: 16px;
   line-height: 18px;
 }
-.contact-with-us h2 {
-  margin: 0;
-}
+
 .modal-close {
   width: 21px;
   height: 21px;
@@ -1218,34 +1256,33 @@ fieldset {
   cursor: pointer;
   top: 78px;
   right: 90px;
-  left: 849px;
+  left: 841px;
   bottom: 490px;
   background-color: var(--basic-white);
   position: absolute;
 }
-.modal-close::before,
-.modal-close::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: -3px;
+
+.modal-close svg path{
+  fill:var(--modal-close-hover);
   width: 21px;
-  height: 3px;
-  background-color: var(--special-red);
-  opacity: 0.3;
-  border-radius: 3px;
+height: 21px;
 }
-.modal-close::before {
-  transform: rotate(45deg);
+
+.modal-close svg path:hover,
+.modal-close svg path:focus{
+  fill:var(--special-red);
 }
-.modal-close::after {
-  transform: rotate(-45deg);
+
+
+.modal-close svg path:active{
+  fill:var(--modal-close-active);
 }
+
 .logo-user {
   width: 360px;
   height: 50px;
   background: var(--basic-white);
-  border: 2px solid #d7dcde;
+  border: 2px solid var(--popup-borders);
   box-sizing: border-box;
   border-radius: 3px;
 }
@@ -1254,11 +1291,13 @@ fieldset {
   font-size: 45px;
   line-height: 53px;
   text-align: left;
+  padding-bottom: 50px;
+  margin: 0;
 }
 
 .text-user {
   background: var(--basic-white);
-  border: 2px solid #d7dcde;
+  border: 2px solid var(--popup-borders);
   box-sizing: border-box;
   border-radius: 3px;
   height: 118px;
