@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
   font-family: "Roboto";
   src: url(../fonts/roboto.woff2) format(woff2),
     url(../fonts/roboto.woff) format(woff);
@@ -651,7 +651,7 @@ button-catalog:focus {
 }
 
 .contacts {
-
+    width: 100vw;
   position: relative;
 }
 
@@ -677,7 +677,7 @@ button-catalog:focus {
   position: absolute;
   display: block;
   top: 112px;
-  left: 825px;
+  left: 895px;
 }
 /*Range*/
 .filter-item {
