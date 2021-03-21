@@ -321,6 +321,7 @@ button-catalog:focus {
   left: 50%;
 }
 .slider-main {
+  position: relative;
   margin: 0 auto;
   max-width: 1157px;
 }
@@ -331,8 +332,8 @@ button-catalog:focus {
   flex-wrap: wrap;
   width: 88px;
   justify-content: space-between;
-  top: 382px;
-  left: 666px;
+  top: 315px;
+    left: 538px;
 }
 /*Servises*/
 .services {
@@ -599,14 +600,13 @@ button-catalog:focus {
   position:absolute;
 }
 .footer-contacts {
+  left:calc(50%-600px);
   background-color: var(--basic-white);
   padding: 50px;
 }
 .footer-social {
   width: 1160px;
-  padding-left: 140px;
-  margin-top: 30px;
-  margin-bottom: 50px;
+margin: 30px auto 50px;
   display: grid;
   grid-template-columns: 25% 75%;
 }
@@ -651,6 +651,7 @@ button-catalog:focus {
 }
 
 .contacts {
+width: 100vw;
 
   position: relative;
 }
@@ -677,7 +678,7 @@ button-catalog:focus {
   position: absolute;
   display: block;
   top: 112px;
-  left: 825px;
+  left: 895px;
 }
 /*Range*/
 .filter-item {
@@ -1314,7 +1315,6 @@ height: 21px;
   display: flex;
   flex-direction: column;
   width: 100%;
-
 }
 
 .popup-list {
