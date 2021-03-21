@@ -23,6 +23,7 @@
 /*Variables*/
 
 :root {
+  --slider-button:#c1c1c1;
   --popup-borders:#d7dcde;
   --modal-close-active:#ffeeef;
   --modal-close-hover:#feccce;
@@ -320,7 +321,7 @@ button-catalog:focus {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 2px solid #c1c1c1;
+  border: 2px solid var(--slider-button);
   box-sizing: border-box;
   top: 50%;
   left: 50%;
@@ -605,12 +606,12 @@ button-catalog:focus {
   position:absolute;
 }
 .footer-contacts {
+  left:calc(50%-600px);
   background-color: var(--basic-white);
   padding: 50px;
 }
 .footer-social {
   width: 1160px;
-  padding-left: 140px;
   margin: 30px auto 50px;
   display: grid;
   grid-template-columns: 25% 75%;
@@ -678,12 +679,7 @@ button-catalog:focus {
   top: 51px;
 
 }
-/* .map-marker {
-  position: absolute;
-  display: block;
-  top: 112px;
-  left: 895px;
-} */
+
 /*Range*/
 .filter-item {
   margin: 0;
